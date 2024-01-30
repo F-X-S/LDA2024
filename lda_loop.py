@@ -28,7 +28,8 @@ for file in excel_files:
 
 # 引入文件及分词
 
-Tingyong = open('C:\\Users\\F7910\Desktop\\LDA_database\\TingYongCi\\Tingyong.txt', encoding='gbk')
+Tingyong = open('C:\\Users\\F7910\Desktop\\LDA_database\\TingYongCi\\Tingyong.txt',
+                encoding='gb18030',errors = 'ignore')
 file_path = 'C:\\Users\\F7910\\Desktop\\LDA_database\\CiQianRu\\glove_2.txt'
 
 output_path = 'C:\\Users\\F7910\\Desktop\\LDA2024\\output'
@@ -113,7 +114,6 @@ cqr_f_1 = np.take(data_cqr_2,ind,axis=1).astype(float)
 
 # 导入lda相关包
 from gensim.corpora import Dictionary
-from gensim.models.ldamodel import LdaModel
 from gensim.models.coherencemodel import CoherenceModel
 import pyLDAvis.gensim_models
 from gensim.models.ldamulticore import LdaMulticore
